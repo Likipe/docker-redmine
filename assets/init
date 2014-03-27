@@ -104,6 +104,8 @@ default:
       authentication: :login
       user_name: "${SMTP_USER}"
       password: "${SMTP_PASS}"
+      openssl_verify_mode: 'none'
+      enable_starttls_auto: true
 EOF
 	chown www-data:www-data config/configuration.yml
 fi

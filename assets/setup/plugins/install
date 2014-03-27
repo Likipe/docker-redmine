@@ -11,6 +11,46 @@ set -e
 mkdir -p /redmine/plugins/redmine_tweaks
 tar -zvxf /redmine/setup/plugins/redmine_tweaks.tar.gz --strip=1 -C /redmine/plugins/redmine_tweaks
 
+# redmine password tool
+# wget https://github.com/simonswine/redmine_password_tool/archive/master.tar.gz -O redmine_password_tool.tar.gz
+# mkdir -p /redmine/plugins/redmine_password_tool
+# tar -zvxf /redmine/setup/plugins/redmine_password_tool.tar.gz --strip=1 -C /redmine/plugins/redmine_password_tool
+
+# redshares plugin
+# wget https://github.com/jzaiat/redshares/archive/master.tar.gz -O redshares.tar.gz
+mkdir -p /redmine/plugins/redshares
+tar -zvxf /redmine/setup/plugins/redshares.tar.gz --strip=1 -C /redmine/plugins/redshares
+
+# redmine screenshot paste plugin
+# wget https://github.com/undx/redmine_screenshot_paste/archive/master.tar.gz -O redmine_screenshot_paste.tar.gz
+mkdir -p /redmine/plugins/redmine_screenshot_paste
+tar -zvxf /redmine/setup/plugins/redmine_screenshot_paste.tar.gz --strip=1 -C /redmine/plugins/redmine_screenshot_paste
+
+# redmine hipchat plugin
+# wget https://github.com/hipchat/redmine_hipchat/archive/master.tar.gz -O redmine_hipchat.tar.gz
+# mkdir -p /redmine/plugins/redmin_hipchat
+# tar -zvxf /redmine/setup/plugins/redmine_hipchat.tar.gz --strip=1 -C /redmine/plugins/redmin_hipchat
+
+# redmine hipchat_per_project plugin
+# wget https://github.com/digitalnatives/redmine_hipchat_per_project/archive/master.tar.gz -O redmine_hipchat_per_project.tar.gz
+# mkdir -p /redmine/plugins/redmine_hipchat_per_project
+# tar -zvxf /redmine/setup/plugins/redmine_hipchat_per_project.tar.gz --strip=1 -C /redmine/plugins/redmine_hipchat_per_project
+
+# redmine file_servers plugin
+# wget https://github.com/alexandermeindl/file_servers/archive/master.tar.gz -O file_servers.tar.gz
+mkdir -p /redmine/plugins/file_servers
+tar -zvxf /redmine/setup/plugins/file_servers.tar.gz --strip=1 -C /redmine/plugins/file_servers
+
+# redmine dashboard plugin
+# wget https://github.com/jgraichen/redmine_dashboard/archive/master.tar.gz -O redmine_dashboard.tar.gz
+mkdir -p /redmine/plugins/redmine_dashboard
+tar -zvxf /redmine/setup/plugins/redmine_dashboard.tar.gz --strip=1 -C /redmine/plugins/redmine_dashboard
+
+# redmine gitlab_merge_request plugin
+# wget https://github.com/pixel-cookers/redmine_gitlab_merge_request/archive/master.tar.gz -O redmine_gitlab_merge_request.tar.gz
+mkdir -p /redmine/plugins/redmine_gitlab_merge_request
+tar -zvxf /redmine/setup/plugins/redmine_gitlab_merge_request.tar.gz --strip=1 -C /redmine/plugins/redmine_gitlab_merge_request
+
 # line numbers plugin
 # wget https://github.com/cdwertmann/line_numbers/archive/master.tar.gz -O line_numbers.tar.gz
 mkdir -p /redmine/plugins/line_numbers
@@ -87,12 +127,17 @@ unzip /redmine/setup/plugins/redmine_people-0_1_6.zip -d /redmine/plugins/
 # wget https://bitbucket.org/haru_iida/redmine_code_review/downloads/redmine_code_review-0.6.3.zip -O redmine_code_review-0.6.3.zip
 unzip /redmine/setup/plugins/redmine_code_review-0.6.3.zip -d /redmine/plugins/
 
-# redmine agile plugin
+# agile plugin
 # wget http://redminecrm.com/license_manager/11099/redmine_agile-1_0_1-light.zip -O redmine_agile-1_0_1-light.zip
 unzip /redmine/setup/plugins/redmine_agile-1_0_1-light.zip -d /redmine/plugins/
+
+# favorite projects plugin
+# wget http://redminecrm.com/license_manager/5383/redmine_favorite_projects-1_0_1.zip
+unzip /redmine/setup/plugins/redmine_favorite_projects-1_0_1.zip -d /redmine/plugins/
 
 #
 ## Satisfy gem dependencies for plugins
 #
 
 bundle install --without development tests
+
